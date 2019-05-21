@@ -1,18 +1,45 @@
 package _01_Simple_Array_Algorithms;
 
 public class _00_1D_Array_Methods {
+	
+	public static void main(String[] args) {
+		int[] num = new int[5];
+		num[0] = 1;
+		num[1] = 2;
+		num[2] = 3;
+		num[3] = 4;
+		num[4] = 5;
+		double sum = averageIntArray(num);
+		
+		System.out.println(sum);
+		
+	}
+	
 	//1. Complete the method so that it returns the sum of all
 	//   of the integers in the array being passed in
 	public static int sumIntArray(int[] values) {
+		
+		int current = 0;
+		
+		for (int i = 0; i < values.length; i++) {
+			current = Math.addExact(current, values[i]);
+		}
 
-		return 0;
+		return current;
 	}
 	
 	//2. Complete the method so that it returns the average of all
 	//   of the integers in the array being passed in
 	public static double averageIntArray(int[] values) {
-				
-		return 0;
+		
+		double current = 0;
+		
+			for (int i = 0; i < values.length; i++) {
+				current = Math.addExact((int) current, values[i]);
+			}
+			current = current / values.length;
+		
+		return current;
 	}
 	
 	
